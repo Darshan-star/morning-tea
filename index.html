@@ -7,11 +7,41 @@
 	<link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGxobJTAhN7EgOaAuo6kVrzP3686QHAqutLQ&usqp=CAU">
 </head>
 <body>
-	<h1> Good Morning My Friend <br> &nbsp;&nbsp;&nbsp;&nbsp; Lets have a tea </h1>
+	<h1> Good Morning My Friend's <br> &nbsp;&nbsp;&nbsp;&nbsp; Lets have a tea </h1>
 	<div class="container">
 		<div class="plate"></div>
 		<div class="cup">
-			<img src="PHOTO.jpg">
+			<div class="slideshow-container">
+				<div class="mySlides fade">
+					<div class="numbertext">1 / 5</div>
+				    <img src="PHOTO.jpg">
+				</div>
+			    <div class="mySlides fade">
+			    	<div class="numbertext">2 / 5</div>
+			    	<img src="6.jpg">
+			    </div>
+			    <div class="mySlides fade">
+			    	<div class="numbertext">3 / 5</div>
+			    	<img src="26.jpeg">
+			    </div>
+			    <div class="mySlides fade">
+			    	<div class="numbertext">4 / 5</div>
+			    	<img src="7.jpg">
+			    </div>
+			    <div class="mySlides fade">
+			    	<div class="numbertext">5 / 5</div>
+			    	<img src="34.jpeg">
+			    </div>
+			</div>
+			<div style="text-align:center">
+                <span class="dot"></span> 
+                <span class="dot"></span> 
+                <span class="dot"></span> 
+                <span class="dot"></span>
+                <span class="dot"></span> 
+            </div>
+
+
 			<div class="top">
 				<div class="vapour">
 					<span style="--i:1;"></span>
@@ -49,5 +79,28 @@
           <a href="https://www.linkedin.com/in/darshan-yadav-9496b0201/">Join on LinkedIn</a>
     </p>
     </footer>
+
+<script>
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+</script>
+
 </body>
 </html>
